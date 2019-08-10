@@ -1,0 +1,35 @@
+/*style.css used for the countdown timer, battery and text on the homepage*/
+
+/*hr for between the text and timercountdown timer*/
+hr{
+    margin: auto;
+    width: 40%;
+}
+/*text above the countdown timer*/
+h1{
+	text-align: center;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+    
+}
+/*countdown timer*/
+#demo{
+	text-align: center;
+  font-size:30px;
+}
+/*countdown timer*/
+.time{
+    height: 100%;
+    position: relative;
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 25px;
+}
+/*battery*/
+#div1{
+	  margin-left: 45%;
+  	font-size:100px;
+  	position: relative;
+    color: white;
+}
+

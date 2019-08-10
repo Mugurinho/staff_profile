@@ -1,0 +1,46 @@
+CREATE DATABASE Portal;
+------------------------------------------------------------------
+CREATE TABLE User (
+	UserID		INT 				AUTO_INCREMENT PRIMARY KEY,
+	Username	NVARCHAR(50)			NOT NULL,
+	Email		NVARCHAR(50)			NOT NULL,
+	Password	NVARCHAR(50)			NOT NULL,
+	Fn		NVARCHAR(50)			NULL,
+	Ln		NVARCHAR(50)			NULL,
+	Address		NVARCHAR(50)			NULL,
+	Image		NVARCHAR(200)			NULL,
+	Profile		NVARCHAR(50)			NULL
+);
+
+CREATE TABLE Notes
+(
+	NoteID		INT 				AUTO_INCREMENT PRIMARY KEY,
+	Subject		NVARCHAR(50)			NOT NULL,
+	Note		NVARCHAR(200)			NOT NULL,
+	DatePost	DATETIME			NOT NULL,
+	Username	NVARCHAR(50)			NOT NULL,
+	UserID		INT				NOT NULL
+);
+
+CREATE TABLE Files
+(
+	FileID		INT 				AUTO_INCREMENT PRIMARY KEY,
+	Type		NVARCHAR(50)			NOT NULL,
+	Size		INT				NOT NULL, 
+	FileName	NVARCHAR(100)			NOT NULL, 
+	Title		NVARCHAR(100)			NOT NULL, 
+	Description 	NVARCHAR(200)			NOT NULL,
+	File 		BLOB				NOT NULL,
+	Username	NVARCHAR(50)			NOT NULL,
+	UserID		INT				NOT NULL
+);
+
+CREATE TABLE Bio
+(
+	BioID		INT 				AUTO_INCREMENT PRIMARY KEY,
+	Bio		NVARCHAR(1500)			NOT NULL,
+	Username	NVARCHAR(50)			NOT NULL,
+	UserID		INT				NOT NULL,
+	BioAccess	NVARCHAR(50)			NOT NULL
+);
+GO
